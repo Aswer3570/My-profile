@@ -98,6 +98,8 @@ section{
     -moz-transition: 0.1s;
     -o-transition: 0.1s;
     transition: 0.1s;
+    appearance: none;
+    -webkit-appearance: none;
 }
 .input:focus{
 	border: solid #313131;
@@ -193,6 +195,8 @@ section{
 	outline: none;
 	font-size: 15px;
 	padding: 10px 0 10px 0;
+	appearance: none;
+    -webkit-appearance: none;
 }
 .textarea:focus{
 	border: solid #313131;
@@ -226,6 +230,8 @@ section{
     -o-transition: 0.1s;
     transition: 0.1s;
     outline: none;
+    appearance: none;
+    -webkit-appearance: none;
 }
 .submit:hover{
 	-webkit-transition: 0.1s;
