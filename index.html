@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My profile</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Noto+Serif|Sulphur+Point:700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<!--Шапка-->
+	<header>
+		<div class="head">
+			<a href="" class="logo">My profile</a>
+			<div class="select">
+				<select class="lang_select" id="selectLang">
+					<option value="ru">RU</option>
+					<option value="en">EN</option>
+				</select>
+			</div>
+		</div>
+	</header>
+
+	<!--Тело-->
+	<section>
+		<div class="container">
+			<div id="regStage1">
+				<p class="title" id="form_title_reg"></p>
+				<form id="form_regStage1">
+					<input type="text" class="input" minlength="2" id="name" onkeyup="removeErrors(this)">
+					<input type="text" class="input" minlength="2" id="surname" onkeyup="removeErrors(this)">
+					<input type="text" class="input" minlength="2" id="patronymic" onkeyup="removeErrors(this)">
+					<textarea class="textarea" id="about" onkeyup="characters(); removeErrors(this)" maxlength="300"></textarea>
+					<p id="limit_calculation">0/550</p>
+					<input type="submit" class="submit" id="input_submit_reg_next" value="">
+				</form>
+				<a onclick="login()" class="login_link" id="login_link"></a>
+			</div>
+
+			<div id="regStage2">
+				<p class="title" id="form_title_reg2"></p>
+				<form id="form_regStage2" enctype="multipart/form-data">
+					<input type="text" class="input" id="login" minlength="2" onkeyup="removeErrors(this)">
+					<p id="errorLoginRegistered" class="error_description error_description_form2"></p>
+					<input type="password" class="input" minlength="8" id="password" onkeyup="removeErrors(this)">
+					<input type="password" class="input" minlength="8" id="repeatPassword" onkeyup="removeErrors(this)">
+					<div id="drop_file">
+    					<label class="label">
+    						<div id="not_add">
+      							<p class="drop_file_title" id="upload_your_photo">test</p>
+      							<img src="images/photo_camera_icon.png" class="drop_file_icon">
+      							<input type="file" id="file" class="file_photo">
+      						</div>
+
+      						<div id="add">
+      							<img src="images/photo_uploaded_successfully_icon.png" class="file_downloaded_icon">
+      							<p class="file_downloaded_title" id="photo_uploaded"></p>
+      						</div>
+    					</label>
+					</div>
+					<p id="errorPasswordsNotMatch" class="error_description error_description_form2"></p>
+					<p id="errorHaveNotUploadedPhoto" class="error_description error_description_form2"></p>
+					<p id="errorPermissibleLimits" class="error_description error_description_form2"></p>
+					<p id="errorUnknown" class="error_description error_description_form2"></p>
+					<p id="error512KB" class="error_description error_description_form2"></p>
+					<p id="uploaded_title"></p>
+					<div id="errorServer_reg">
+						<p id="errorServer_reg_title"></p>
+					</div>
+					<input type="submit" class="submit" id="input_submit_reg">
+				</form>
+			</div>
+
+			<div id="signInAccount">
+				<p class="title" id="form_title_log"></p>
+				<form id="form_login">
+					<input type="text" class="input" id="login_login" onkeyup="removeErrors(this)" minlength="2">
+					<input type="password" class="input" id="password_login" onkeyup="removeErrors(this)" minlength="8">
+					<p id="errorPasswordLogin" class="error_description error_description_form2"></p>
+					<div id="errorServer_login">
+						<p id="errorServer_login_title"></p>
+					</div>
+					<input type="submit" class="submit" id="input_submit_log" value="">
+				</form>
+				<a onclick="hideLogin()" class="login_link_back" id="back_link"></a>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/cookie.js"></script>
+	<script src="js/SHA256.js"></script>
+	<script src="js/autoresize.js"></script>
+	<script src="main.js"></script>
+
+</body>
+</html>
