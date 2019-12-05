@@ -49,7 +49,7 @@
             "input_password": "Пароль",
             "input_repeatPassword": "Повторите пароль",
             "input_submit_reg_next": "Далее",
-            "input_submit_reg": "Зарегистрироватся",
+            "input_submit_reg": "Зарегистрироваться",
             "input_submit_log": "Войти",
             "uploaded_title": "Изображение не должно превышать 800 пикселей по ширине и 1200 пикселей по высоте. А также не должно быть больше 512КБ.",
             "file": [{

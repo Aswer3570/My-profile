@@ -5,7 +5,7 @@ include('data_base.php');
 $data = $_POST['client_id'];
 
 // Ищем в таблице нужного пользователя и формируем JSON
-$searchUser = $pdo->prepare('SELECT * FROM `user` LEFT JOIN `images` ON user.id = images.foreign_key WHERE user.client_id = ?');
+$searchUser = $pdo->prepare('SELECT * FROM `user` LEFT JOIN `images` ON user.id = images.foreign_key WHERE user.client_id = ? LIMIT 1');
 $searchUser->execute([$data]);
 
 if($row = $searchUser->fetch()){

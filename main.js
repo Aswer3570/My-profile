@@ -1,4 +1,4 @@
-// Проверяем, если куки существуют, то редиректим пользователя обратно в его аккаунт
+// Проверяем, если куки существуют, то редиректом пользователя обратно в его аккаунт
 if(Cookies.get('client_id')){
 	window.location.replace('account');
 }
@@ -65,7 +65,7 @@ $.getJSON('languages/lang.json', function(data){
 	});
 });
 
-// Функция резрешающая только английские символы
+// Функция разрешающая только английские символы
 $("#login").keypress(function(event){
     return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 48 && event.charCode <= 57)
 });
@@ -82,7 +82,7 @@ function hideLogin(){
 	$("#regStage1").show();
 }
 
-// Функция подсчёта колличества введённых символов в "about"
+// Функция подсчёта количества введённых символов в "about"
 function characters(){
 	aboutLength = $("#about").prop('value').length;
 	$("#limit_calculation").html(aboutLength + '/550');
@@ -130,7 +130,7 @@ $('#file').change(function(){
     }
 });
 
-// Функция отключение ошибок
+// Функция отключения ошибок
 function removeErrors(data){
 	if(data.value != ''){
 		$('#' + data.id).removeClass("error_message_input");
@@ -187,7 +187,7 @@ $('#form_regStage2').submit(function(event){
     			form_data.append('login', login);
     			form_data.append('password', passwordSHA256);
 
-    			// Отправляем полуенные данные на сервер
+    			// Отправляем полученные данные на сервер
     			$.ajax({
 					type: 'post',
 					url: 'backend/registration.php',

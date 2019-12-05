@@ -26,7 +26,7 @@ else{
 			}
 		},
 		error: function(){
-            alert('Ошибка сервера');
+            alert('Server error');
         }
 	});
 }

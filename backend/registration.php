@@ -9,7 +9,7 @@ $login = $_POST['login'];
 $password = $_POST['password'];
 
 // Выполняем поиск логина по БД
-$searchLogin = $pdo->prepare('SELECT login FROM `user` WHERE login LIKE ?');
+$searchLogin = $pdo->prepare('SELECT login FROM `user` WHERE login LIKE ? LIMIT 1');
 $searchLogin->execute([$login]);
 
 if($searchLogin->rowCount() != 0){
@@ -27,12 +27,12 @@ else{
 	// Загрузка изображения на сервер
 	// Папка в которую будет загружаться изображение
 	$uploaddir = '../images/users/';
-	// Имя которое будет присвоенно изображению 
+	// Имя которое будет присвоено изображению
 	$apend = date('YmdHis') . rand(100,1000) . '.jpg'; 
 	$uploadfile = "$uploaddir$apend"; 
 	// Проверяем файл на тип и размер
 	if(($_FILES['file']['type'] == 'image/gif' || $_FILES['file']['type'] == 'image/jpeg' || $_FILES['file']['type'] == 'image/png') && ($_FILES['file']['size'] != 0 and $_FILES['file']['size'] <= 512000)){ 
-		// Перемещаем загруженное изображение в нужную нам деррикторию
+		// Перемещаем загруженное изображение в нужную нам директорию
   		if(move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile)){ 
    			// Загружаем изображение
    			$size = getimagesize($uploadfile); 

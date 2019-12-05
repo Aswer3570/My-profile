@@ -8,11 +8,11 @@ $password = $_POST['password'];
 $password = strrev($password);
 
 // Делаем запрос в БД
-$searchLogin = $pdo->prepare('SELECT login, password, client_id FROM `user` WHERE login = ?');
+$searchLogin = $pdo->prepare('SELECT login, password, client_id FROM `user` WHERE login = ? LIMIT 1');
 $searchLogin->execute([$login]);
 $row = $searchLogin->fetch();
 
-// Пролучаем данные из БД
+// Получаем данные из БД
 $loginDB = $row['login'];
 $passwordDB = $row['password'];
 $client_idDB = $row['client_id'];
