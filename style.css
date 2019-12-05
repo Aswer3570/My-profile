@@ -21,7 +21,7 @@ header{
 .logo{
 	color: #313131;
 	font-size: 26px;
-	font-family: 'Abril Fatface', cursive;
+	font-family: 'AbrilFatface', cursive;
 	float: left;
 	text-decoration: none;
 }
@@ -185,7 +185,7 @@ section{
 .textarea{
 	width: 100%;
 	height: 18px;
-	margin-top: 29px;
+	margin-top: 20px;
 	border: solid #cacaca;
 	border-top-width: 0;
 	border-right-width: 0;
