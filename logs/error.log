@@ -1,0 +1,7 @@
+2019/12/07 12:29:49 [emerg] 1#1: directive "location" has no opening "{" in /etc/nginx/conf.d/default.conf:9
+2019/12/07 12:32:08 [emerg] 1#1: directive "location" has no opening "{" in /etc/nginx/conf.d/default.conf:9
+2019/12/07 12:34:28 [emerg] 1#1: directive "location" has no opening "{" in /etc/nginx/conf.d/default.conf:8
+2019/12/07 12:38:12 [emerg] 1#1: host not found in upstream "php-fpm" in /etc/nginx/conf.d/default.conf:11
+2019/12/07 12:47:09 [emerg] 1#1: host not found in upstream "php-fpm" in /etc/nginx/conf.d/nginx.conf:11
+2019/12/07 12:48:41 [emerg] 1#1: host not found in upstream "php-fpm" in /etc/nginx/conf.d/default.conf:11
+2019/12/07 12:51:07 [emerg] 1#1: host not found in upstream "php-fpm" in /etc/nginx/conf.d/default.conf:11
