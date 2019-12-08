@@ -1,0 +1,279 @@
+body{
+	margin: 0;
+	font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+	display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/*Шапка*/
+header{
+	flex: 0 0 auto;
+	border-bottom: 1px solid #ececec;
+}
+.head{
+	max-width: 1000px;
+    width: 87.4%;
+    padding: 15px 6.3% 15px 6.3%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.logo{
+	color: #313131;
+	font-size: 26px;
+	font-family: 'AbrilFatface', cursive;
+	float: left;
+	text-decoration: none;
+}
+.select{
+    position: relative;
+    float: right;
+    margin-top: 8px;
+}
+.select, .lang_select{
+	width: 65px;
+}
+.select:after{
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    border-color: #000 transparent transparent transparent;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    z-index: 1;
+    margin-top: -3px;
+}
+.lang_select{
+	border: 0;
+	-webkit-appearance: none;
+  	-moz-appearance: none;
+  	appearance: none;
+  	font-size: 18px;
+  	background-color: #fff;
+  	color: #313131;
+  	outline: none;
+  	cursor: pointer;
+}
+
+/*Тело*/
+section{
+	display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+	width: 300px;
+	margin: 20px;
+	padding: 30px;
+	box-shadow: 0 0 10px #bbbbbb;
+	overflow: hidden;
+}
+#regStage2{
+	display: none;
+}
+.title{
+	color: #313131;
+	font-size: 22px;
+	margin: 0;
+	text-align: center;
+	font-weight: 900;
+}
+.input{
+	width: 100%;
+	box-sizing: border-box;
+	border: solid #cacaca;
+	border-top-width: 0;
+	border-right-width: 0;
+	border-bottom-width: 2px;
+	border-left-width: 0;
+	font-size: 15px;
+	padding: 10px 0 10px 0;
+	margin: 20px 0 0 0;
+	outline: none;
+	-webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s;
+    appearance: none;
+    -webkit-appearance: none;
+}
+.input:focus{
+	border: solid #313131;
+	border-top-width: 0;
+	border-right-width: 0;
+	border-bottom-width: 2px;
+	border-left-width: 0;
+	-webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s;
+}
+::-webkit-input-placeholder{
+	color: #313131;
+}
+::-moz-placeholder{
+	color: #313131;
+}
+:-moz-placeholder{
+	color: #313131;
+}
+:-ms-input-placeholder{
+	color: #313131;
+}
+.login_link, .login_link_back{
+	color: #007fdc;
+	font-size: 14px;
+	text-decoration: none;
+	margin-top: 20px;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+}
+.login_link_back{
+	text-align: left;
+}
+
+#drop_file{
+	margin-top: 20px;
+}
+#drop_file input[type=file]{
+	outline: 0;
+	opacity: 0;
+	pointer-events: none;
+	user-select: none
+}
+#drop_file .label{
+	width: auto;
+	border: 2px dashed #cacaca;
+	display: block;
+	padding: 10px 60px 10px 60px;
+	cursor: pointer;
+	overflow: hidden;
+}
+#drop_file:hover{
+	background-color: #edeef0;
+}
+#uploaded_title{
+	color: #848484;
+	font-size: 12px;
+	margin: 20px 0 0 0;
+}
+.drop_file_title, .file_downloaded_title{
+	color: #313131;
+	font-size: 14px;
+	margin: 0 0 -20px 0;
+	float: right;
+}
+.drop_file_icon, .file_downloaded_icon{
+	width: 20px;
+	float: left;
+	margin: 0 0 -20px 0;
+}
+.file_downloaded_title{
+	margin: 0 16px 0 0;
+}
+.file_downloaded_icon{
+	margin: 0 0 0 16px;
+}
+#add{
+	display: none;
+}
+.textarea{
+	width: 100%;
+	height: 18px;
+	margin-top: 20px;
+	border: solid #cacaca;
+	border-top-width: 0;
+	border-right-width: 0;
+	border-bottom-width: 2px;
+	border-left-width: 0;
+	resize: none;
+	outline: none;
+	font-size: 15px;
+	padding: 10px 0 10px 0;
+	appearance: none;
+    -webkit-appearance: none;
+}
+.textarea:focus{
+	border: solid #313131;
+	border-top-width: 0;
+	border-right-width: 0;
+	border-bottom-width: 2px;
+	border-left-width: 0;
+	-webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s;
+}
+#limit_calculation{
+	font-size: 12px;
+	margin: 5px 0 0 0;
+	color: #313131;
+	float: right;
+}
+.submit{
+	width: 100%;
+	box-sizing: border-box;
+	border: 0;
+	background-color: #313131;
+	color: #fff;
+	font-size: 18px;
+	padding: 15px 0 15px 0;
+	margin-top: 20px;
+	cursor: pointer;
+	-webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+.submit:hover{
+	-webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s;
+    background-color: #000;
+}
+
+/*Вход*/
+#signInAccount{
+	display: none;
+}
+
+/*Вывод ошибок*/
+.error_message_input{
+	background-color: #ff00002e;
+	border: solid #e40000;
+	border-top-width: 0;
+	border-right-width: 0;
+	border-bottom-width: 2px;
+	border-left-width: 0;
+}
+.error_description{
+	color: #e6432d;
+	font-size: 14px;
+	margin: 3px 0 0 0;
+	display: none;
+}
+.error_description_form2{
+	margin: 20px 0 0 0;
+}
+#errorServer_login, #errorServer_reg{
+	margin-top: 20px;
+	padding: 10px;
+	border: 2px solid #e6432d;
+	background-color: #f9d4d2;
+	display: none;
+}
+#errorServer_login_title, #errorServer_reg_title{
+	color: #e6432d;
+	font-size: 15px;
+	margin: 0;
+	text-align: center;
+}
